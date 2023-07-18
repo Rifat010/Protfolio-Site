@@ -53,13 +53,14 @@
     color: #333;
   }
   .section-title p {
-    max-width: 100%;
+    max-width: 70%;
     margin: auto;
     font-size: 14px;
     color: #858585;
     letter-spacing: .3px;
     word-spacing: .4px;
     line-height: 20px;
+    font-weight: 300;
   }
   /* reusable code  end*/
 
@@ -480,7 +481,7 @@ width: 20px;
 /* ==============plan section start */
 .plan-section {
   max-width: 100%;
-  padding: 100px 0;
+  padding: 70px 0;
 }
 .plan-container {
   width: 100%;
@@ -589,3 +590,142 @@ width: 20px;
   cursor: pointer;
 }
 /*===============plan section end */
+
+/* ===============blog section start */
+.blog-section {
+  width:100%;
+  padding: 120px 0;
+  background-color: #F9F9FF;
+}
+
+.blog-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.blog-div {
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+.blog-div .blog-div-img {
+  width: 100%;
+  overflow: hidden;
+}
+.blog-div .blog-div-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all .3s linear; 
+}
+/* img hover */
+.blog-div:hover .blog-div-img img {
+  transform: scale(1.1);
+  display: block;
+}
+/* blog details */
+/* .blog-datails {} */
+/* blog activites */
+.blog-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid red; */
+  padding: 5px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+  /* blog active div 1 */
+.blog-active-div-1 {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+.blog-active-div-1 img {
+  width: 30px;
+  background-color: rgba(160, 160, 160, 0.37);
+}
+.blog-active-div-1 span {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #555;
+}
+/* blog active div 2  */
+.blog-active-div-2 {
+  width: 160px;
+  padding: 3px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-active-div-2 span {
+  font-weight: 200;
+  font-size: 15px;
+  color: #888;
+}
+.blog-active-div-2 span i {
+  transition: all .2s linear; 
+}
+.blog-active-div-2 span i:hover {
+  color: red;
+}
+
+/* blog information */
+.blog-information {
+/* background-color: red; */
+padding-top: 30px;;
+}
+.blog-information h3 {
+  text-transform: uppercase;
+  font-size: large;
+  letter-spacing: .7px;
+  word-spacing: .9px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  transition: .3s;
+}
+/* blog information h3 hover effect */
+.blog-div:hover .blog-information h3 {
+  color:#8490ff;
+}
+/* blog information p */
+.blog-information p {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: .5px;
+  font-weight: 300;
+}
+/* ===============blog section end*/
+
+/* ===============brand section start */
+.brand-section {
+  padding: 10px 0;
+  background: linear-gradient(to right ,#8490ff,#62bdfc)
+}
+.brand-container {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 10px;
+}
+.brand-container div {
+  text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-container div img {
+  opacity: .5;
+  transition: all .3s;
+}
+/* brand div img hover effect */
+.brand-container div img:hover {
+  opacity: 1;
+}
+
+
+
+/* ===============brand section end */
