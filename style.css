@@ -62,6 +62,12 @@
     line-height: 20px;
     font-weight: 300;
   }
+  /* singel text design */
+  .color-text {
+    color: #8490ff;
+    font-size: 15px;
+    font-weight: 500;
+  }
   /* reusable code  end*/
 
 
@@ -693,7 +699,7 @@ padding-top: 30px;;
 }
 /* blog information p */
 .blog-information p {
-  font-size: 13px;
+  font-size: 14px;
   color: #888;
   letter-spacing: .5px;
   font-weight: 300;
@@ -726,6 +732,114 @@ padding-top: 30px;;
   opacity: 1;
 }
 
-
-
 /* ===============brand section end */
+
+/* ================footer start */
+footer {
+  max-width: 100%;
+  padding: 110px 0;
+  background-color: rgb(46, 31, 90);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 150px;
+  column-gap: 20px;
+}
+/* footer about */
+.footer-about > h3 {
+  color: #fff;
+  text-transform: capitalize;
+  font: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.footer-about > p {
+  color: #c4c4c4;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  line-height: 22px;
+}
+
+/* footer newsletter */
+.footer-nl h3 {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.footer-nl p {
+  color: #c4c4c4;  
+  font-size: 13px;
+  font-weight: 400;
+}
+.footer-nl .email-send{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-nl .email-send input {
+  width: 100%;
+  padding: 7px;
+  color: #8d8d8d;
+  letter-spacing: .5px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+.footer-nl .email-send input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+}
+.footer-nl .email-send button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #8490ff;
+  transition: all .3s;
+}
+.footer-nl .email-send button:hover{
+  background-color:#6472f0;
+}
+.footer-nl .email-send button span {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* footer follow me */
+.footer-fw-me h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.footer-fw-me p {
+  color: #c4c4c4;
+  font-size: 13px;
+  font-weight: 400;
+}
+.footer-fw-me ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-fw-me ul li a {
+  display: block;
+}
+.footer-fw-me ul li a i {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  transition:  all .1s;
+}
+.footer-fw-me ul li a i:hover {
+  color:#6933f1;
+}
+/* ================footer end */
