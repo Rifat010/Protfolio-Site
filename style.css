@@ -97,12 +97,13 @@ header {
   align-items: center;
 }
 .header-contents .logo {
-  width: 200px;
+  max-width: 40%;
 }
 
 /* navigation bar */
 .navbar {
   max-width: 60%;
+  position: relative;
 }
 .navbar ul {
   display: flex;
@@ -126,6 +127,40 @@ header {
   color: #8490ff;
 }
 
+/* togglebar */
+.toggle-bar {
+  width: 25px;
+  float: right;
+  /* margin-top: -20px; */
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.toggle-bar i {
+  color: black;
+  font-size: 23px;
+}
+/* mobaile-body-overlay */
+.mobaile-body-overlay {
+display: none;
+}
+/* over lay close btn */
+.mobaile-body-overlay .close-btn {
+  color: #fff;
+  position: absolute;
+  top:  10px; 
+  right: 10px;
+  font-size: 25px;
+  transition: .3s;
+  padding: 5px 7px;
+}
+.mobaile-body-overlay .close-btn:hover  {
+  color: #5568fd;
+  border: 2px solid #9234fd;
+  border-radius: 50%;
+  padding: 5px 7px;
+}
 /* ==============header end */
 
 /*=========== hero section start */
@@ -212,7 +247,7 @@ max-width:100%;
   font-size: 14px;
   font-weight: normal;
   color: #363636;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: .3px;
 }
 .about-dtl h1 {
@@ -243,8 +278,7 @@ max-width:100%;
 }
 .service-box {
   padding: 30px 15px;
-  text-align: center;
-  
+  text-align: center; 
 }
 /* service icon */
 .service-box .service-icon {
@@ -323,8 +357,10 @@ background: linear-gradient( to right,#8391FF,#65BAFC);
 }
 
 .protfolio-controlbar {
+  width: 50%;
+  margin: auto;
   text-align: center;
-    margin-top: 100px;
+  margin-top: 100px;
 }
 .protfolio-controlbar ul {
   display: flex;
@@ -370,7 +406,7 @@ width: 20px;
 }
 .protfolio-div {
   text-align: center;
-  
+  overflow: hidden;
 }
 .profilio-img {
   text-align: center;
@@ -406,8 +442,8 @@ width: 20px;
   margin: auto;
   position: absolute;
   top: 0;
-  left:0;
- margin: 0 15px;
+  left:15px;
+  margin: auto;
  border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -843,3 +879,183 @@ footer {
   color:#6933f1;
 }
 /* ================footer end */
+
+
+
+
+
+
+
+
+/*  media quary for MOBAILE devices */
+@media screen and (max-width: 767.98px) {
+/* navbar styling.. */
+.navbar {
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0.1);
+  transition: .1s;
+  overflow: hidden;
+  z-index: 999;
+}
+.navbar ul {
+  display: block;
+}
+.navbar ul li {
+  margin: 25px 5px;
+}
+.navbar ul li a {
+  color: #fff;
+  letter-spacing: .1rem;
+  font-size: 13px;
+}
+.mobaile-body-overlay{
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  display: block;
+  background-color: rgb(0,0,0,0.7);
+  transition: .1s;
+  z-index: 20;
+  overflow: hidden;
+}
+/* navbar toggle icon */
+.toggle-bar {
+  display: block;
+}
+/* navbar styling.. end*/
+
+/* hero section start */
+.hero-container {
+  display: block;
+}
+.hero-contents {
+  width: 100%;
+  display: block;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.hero-contents h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.hero-img {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+/* hero section end */
+
+/* about section start */
+.about-container {
+  display: block;
+  padding: 0;
+}
+.about-image {
+  width: 80%;
+  margin: 0px auto;
+}
+.about-dtl {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.about-dtl h1 {
+  font-size: 25px;
+}
+/* about section end */
+
+/* service section start */
+.services-boxs {
+  display: block;
+}
+.service-section .section-title h2{
+  font-size: 25px;
+}
+
+.service-box {
+  width: 70%;
+  margin: auto;
+}
+/* service section end */
+
+/* counter section start */
+.counter-container {
+  display: block;
+}
+.counter-div {
+  width: 70%;
+  margin: auto;
+}
+/* counter section end */
+
+/* protfolio section start */
+.protfolio-section .section-title h2 {
+  font-size: 25px
+}
+.protfolio-controlbar {
+  width: 50%;
+  margin: auto;
+}
+.protfolio-controlbar ul {
+  /* display: block; */
+  width: 50%;
+  margin:auto;
+}
+.protfolio-controlbar ul li a {
+  padding: 0;
+}
+.protfolio-card-divs {
+  display: block;
+  overflow: hidden;
+}
+.protfoli-overlay {
+  width: 100%;
+  left: 0;
+}
+/* protfolio section end */
+
+/* feedback section start */
+.feedback-section .section-title h2 {
+  font-size: 25px;
+}
+.feedback-section .section-title p {
+  font-size: 12px;
+}
+.feedback-container {
+  display: block;
+}
+.feedback-box {
+  width: 100%;
+  height:  100%;
+  margin: auto;
+  margin-bottom: 20px;;
+}
+
+/* feedback section end */
+
+
+/* plan section start */
+.plan-section .section-title h2 {
+  font-size: 25px;
+}
+.plan-section .section-title p {
+  font-size: 12px;
+}
+.plan-container {
+  display: block;
+}
+.plan-div {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* plan section end */
+
+}

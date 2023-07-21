@@ -1,4 +1,9 @@
 let header = document.querySelector('header');
+let navbar = document.querySelector('.navbar');
+let overlay = document.querySelector('.mobaile-body-overlay');
+let navToggler = document.querySelector('.toggle-bar') ;
+let navCloseBtn = document.querySelector('.close-btn');
+
 window.addEventListener('scroll',function(){
    
     if(this.scrollY > 100){
@@ -9,3 +14,14 @@ window.addEventListener('scroll',function(){
     }
 }
 )
+
+// nav toggler event Listener
+navToggler.addEventListener('click',function(){
+    navbar.style.width =  20 + '%';
+    overlay.style.width = 80 + '%'
+})
+// nav close btn event Listener 
+navCloseBtn.addEventListener('click',function(){
+    navbar.style.width = 0 + '%'
+    overlay.style.width = 0 + '%'
+})
