@@ -17,7 +17,7 @@
     list-style: none;
   }
   .container{
-    max-width: 85%;
+    max-width: 83%;
     margin: auto;
     padding: 0px 15px;
   }
@@ -92,6 +92,7 @@ header {
 }
 /* header contents */
 .header-contents {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -535,7 +536,7 @@ width: 20px;
 .plan-div {
   text-align: center;
   background-color: #F8F8FE;
-  padding: 20px;
+  padding: 15px;
   transition: all .2s linear;
 }
 .plan-div .plan-outer-circle {
@@ -674,7 +675,7 @@ width: 20px;
   justify-content: space-between;
   align-items: center;
   /* border: 2px solid red; */
-  padding: 5px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #e0e0e0;
 }
   /* blog active div 1 */
@@ -744,13 +745,16 @@ padding-top: 30px;;
 
 /* ===============brand section start */
 .brand-section {
+  max-width: 100%;
   padding: 10px 0;
   background: linear-gradient(to right ,#8490ff,#62bdfc)
 }
 .brand-container {
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(5,1fr);
   gap: 10px;
+  overflow: hidden;
 }
 .brand-container div {
   text-align: center;
@@ -774,7 +778,7 @@ padding-top: 30px;;
 footer {
   max-width: 100%;
   padding: 110px 0;
-  background-color: rgb(46, 31, 90);
+  background-color: rgb(15, 0, 56);
 }
 
 .footer-container {
@@ -862,6 +866,7 @@ footer {
   font-weight: 400;
 }
 .footer-fw-me ul {
+  max-width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -887,8 +892,163 @@ footer {
 
 
 
+
+
+
+/* media quary for large laptop or desktop screen */
+@media  screen and (min-width:992px) and (max-width:1191.98px){
+  .about-image{
+    margin-top: 100px;
+  }
+  .about-dtl {
+    height: 100%;
+  }
+}
+
+/* media quary for Tablete devices */
+@media screen and (min-width:768px) and (max-width: 991.98px){
+    /* navbar styling.. */
+.navbar {
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0.1);
+  transition: .1s;
+  overflow: hidden;
+  z-index: 999;
+}
+.navbar ul {
+  display: block;
+}
+.navbar ul li {
+  margin: 25px 5px;
+}
+.navbar ul li a {
+  color: #fff;
+  letter-spacing: .1rem;
+  font-size: 13px;
+}
+.mobaile-body-overlay{
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  background-color: rgb(0,0,0,0.7);
+  transition: .1s;
+  z-index: 20;
+  overflow: hidden;
+}
+/* navbar toggle icon */
+.toggle-bar {
+  display: block;
+}
+/* navbar styling.. end*/
+
+/* about section start */
+.about-image {
+  margin-top: 15%;
+}
+.about-dtl {
+  height: 100%;
+}
+.about-dtl h4 {
+  font-size: 16px;
+}
+
+.about-dtl h1 {
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+/* about section end */
+
+/* service section start */
+.services-boxs {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 10px;
+}
+/* service section end */
+
+/* counter section start */
+.counter-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+/* counter section end */
+
+/* protfolio section start */
+.protfolio-card-divs {
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 30px; 
+  padding:20px 30px;
+}
+/* protfoli  overlay */
+.protfoli-overlay {
+  width: 100%;
+  left: 0;
+}
+/* protfolio section end */
+
+/* plan section start */
+.plan-container {
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+/* plan section end */
+
+/* brand section start */
+.brand-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.brand-container div:nth-child(4) {
+  display: none;
+}
+.brand-container div:nth-child(5) {
+  display: none;
+}
+/* brand section end */
+
+/* footer section start */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.footer-nl p {
+  margin-bottom: 10px;
+}
+.footer-fw-me {
+  max-width: 50%;
+  margin-top: 20px;
+}
+.footer-fw-me h3 {
+  margin-bottom: 0px;
+}
+.footer-fw-me p {
+  margin-bottom: 10px;
+}
+/* footer section end */
+}
+
 /*  media quary for MOBAILE devices */
 @media screen and (max-width: 767.98px) {
+  /* container */
+.container {
+  max-width: 100%;
+  padding: 0 15px;
+}
+/* section */
+section {
+  padding: 20px 0;
+}
 /* navbar styling.. */
 .navbar {
   width: 0%;
@@ -917,7 +1077,7 @@ footer {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 20%;
+  right: 0;
   display: block;
   background-color: rgb(0,0,0,0.7);
   transition: .1s;
@@ -1041,7 +1201,6 @@ footer {
 
 /* feedback section end */
 
-
 /* plan section start */
 .plan-section .section-title h2 {
   font-size: 25px;
@@ -1058,4 +1217,63 @@ footer {
 }
 /* plan section end */
 
+/* blog section start */
+.blog-section .section-title h2{
+  font-size: 25px;
+}
+.blog-section .section-title p{
+  font-size: 12px;
+}
+
+.blog-container {
+  display: block;
+}
+.blog-div {
+  margin-bottom: 50px;
+}
+.blog-div:last-child {
+  margin-bottom: 0px;
+}
+/* blog section end */
+
+/* brand section start */
+.brand-container {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.brand-container div:nth-child(3){
+  display: none;
+}
+.brand-container div:nth-child(4){
+  display: none;
+}
+.brand-container div:nth-child(5){
+  display: none;
+}
+/* brand section end */
+
+/* footer section start */
+.footer-container {
+  display: block;
+}
+.footer-div {
+  margin-bottom: 20px;
+}
+.footer-div h3 {
+  font-size: 17px;
+  letter-spacing: .2px;
+  margin-bottom: 7px;
+}
+.footer-div p {
+  font-size: 13px;
+}
+.footer-fw-me {
+  max-width: 50%;
+}
+.footer-fw-me ul {
+  margin-top: 20px;
+}
+/* footer section end */
 }

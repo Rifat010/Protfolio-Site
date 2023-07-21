@@ -17,8 +17,8 @@ window.addEventListener('scroll',function(){
 
 // nav toggler event Listener
 navToggler.addEventListener('click',function(){
-    navbar.style.width =  20 + '%';
-    overlay.style.width = 80 + '%'
+    navbar.style.width =  40 + '%';
+    overlay.style.width = 60 + '%'
 })
 // nav close btn event Listener 
 navCloseBtn.addEventListener('click',function(){
